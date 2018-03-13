@@ -161,6 +161,7 @@
 	/*
 	@tab Page
 	@section Heading 2
+	@style heading 2
 	*/
 		h2{
 			/*@editable*/color:#000000;
@@ -174,6 +175,7 @@
 	/*
 	@tab Page
 	@section Heading 3
+	@style heading 3
 	*/
 		h3{
 			/*@editable*/color:#000000;
@@ -186,6 +188,7 @@
   /*
   @tab Page
   @section Heading 4
+	@style heading 4
   */
   h4{
     /*@editable*/color:#000000;
@@ -293,7 +296,7 @@
 	@section Column Style
 	@tip Set the background color and borders for your email's columns.
 	*/
-		#templateColumns{
+		.templateColumns{
 			/*@editable*/background-color:#FFFFFF;
 			/*@editable*/padding-top:0;
 			/*@editable*/padding-bottom:9px;
@@ -304,7 +307,7 @@
 	@section Column Text
 	@tip Set the styling for your email's column text. Choose a size and color that is easy to read.
 	*/
-		#templateColumns .columnContainer .mcnTextContent,#templateColumns .columnContainer .mcnTextContent p{
+		.templateColumns .columnContainer .mcnTextContent,.templateColumns .columnContainer .mcnTextContent p{
 			/*@editable*/color:#000000;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:20px;
@@ -316,7 +319,7 @@
 	@section Column Link
 	@tip Set the styling for your email's column links. Choose a color that helps them stand out from your text.
 	*/
-		#templateColumns .columnContainer .mcnTextContent a, #templateColumns .columnContainer .mcnTextContent p a{
+		.templateColumns .columnContainer .mcnTextContent a, .templateColumns .columnContainer .mcnTextContent p a{
 			/*@editable*/color:#009EE0;
 			/*@editable*/font-weight:normal;
 			/*@editable*/text-decoration:none;
@@ -519,7 +522,7 @@
                         <tr>
                             <td valign="top" id="templateLogo">
                                 <!-- BEGIN MODULE: LOGO IMAGE // -->
-                                <img src="http://ci.sfgz.ch/newsletter/header.png" style="max-width:600px;" class="templateImage">
+                                <img alt="header image" src="http://ci.sfgz.ch/newsletter/header.png" style="max-width:600px;" class="templateImage">
                                 <!-- // END MODULE: LOGO IMAGE -->
                             </td>
                         </tr>
@@ -530,7 +533,7 @@
                             <td valign="top" id="templateHeader">
 
                                 <!-- BEGIN MODULE: HEADER IMAGE // -->
-                                <img src="http://ci.sfgz.ch/newsletter/600x360.png" style="max-width:600px;" class="templateImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
+                                <img alt="image" src="http://ci.sfgz.ch/newsletter/600x360.png" style="max-width:600px;" class="templateImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
                                 <!-- // END MODULE: HEADER IMAGE -->
 
                             </td>
@@ -558,7 +561,7 @@ Lorem ipsum dolor <a href="http://sfgz.ch/">Link</a> sit amet, consectetuer adip
 
                                 <!-- BEGIN MODULE: BODY CONTENT // -->
                                 <div class="modulefullsize" mc:repeatable="mainContent" mc:variant="1 Spalte – Bild">
-                                  <img src="http://ci.sfgz.ch/newsletter/600x360.png" style="max-width:600px;" class="templateImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
+                                  <img alt="image" src="http://ci.sfgz.ch/newsletter/600x360.png" style="max-width:600px;" class="templateImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
                                 </div>
                                 <!-- // END MODULE: BODY CONTENT -->
 
@@ -566,7 +569,7 @@ Lorem ipsum dolor <a href="http://sfgz.ch/">Link</a> sit amet, consectetuer adip
 
                                 <!-- BEGIN MODULE: BODY CONTENT // -->
                                 <div class="module" mc:repeatable="mainContent" mc:variant="2 Spalten – Text">
-                                  <div id="templateColumns">
+                                  <div class="templateColumns">
                                      <!--[if (gte mso 9)|(IE)]>
                                      <table align="center" border="0" cellspacing="0" cellpadding="0" width="564" style="width:564px;">
                                         <tr>
@@ -700,7 +703,7 @@ Lorem ipsum dolor <a href="http://sfgz.ch/">Link</a> sit amet, consectetuer adip
 
                                   <!-- BEGIN MODULE: BODY CONTENT // -->
                                   <div class="module" mc:repeatable="mainContent" mc:variant="2 Spalten – Footer">
-                                    <div id="templateColumns">
+                                    <div class="templateColumns">
                                        <!--[if (gte mso 9)|(IE)]>
                                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="564" style="width:564px;">
                                           <tr>
@@ -728,9 +731,9 @@ Lorem ipsum dolor <a href="http://sfgz.ch/">Link</a> sit amet, consectetuer adip
 
                                                                                             <div mc:edit="body_content_00">
                                                                                                 <h4>
-                                                                                                  Wir beraten Sie gerne!</br>
-                                                                                                  Weiterbildungssekaretariat</br>
-                                                                                                  E-Mail: <a href="mailto:weiterbildung@sfgz.ch">weiterbildung@sfgz.ch</a></br>
+                                                                                                  Wir beraten Sie gerne!<br />
+                                                                                                  Weiterbildungssekaretariat<br />
+                                                                                                  E-Mail: <a href="mailto:weiterbildung@sfgz.ch">weiterbildung@sfgz.ch</a><br />
                                                                                                   Telefon: 044 446 97 77
                                                                                                 </h4>
                                                                                             </div>
@@ -779,15 +782,15 @@ Lorem ipsum dolor <a href="http://sfgz.ch/">Link</a> sit amet, consectetuer adip
 
                                                                                            <div>
                                                                                              <a target="_blank" href="https://www.facebook.com/sfgzzh/" class="">
-                                                                                               <img src="http://ci.sfgz.ch/newsletter/icons/facebook.png" class="icons-link">
+                                                                                               <img alt="facebook" src="http://ci.sfgz.ch/newsletter/icons/facebook.png" class="icons-link">
 
                                                                                              </a>
                                                                                              <a target="_blank" href="https://www.instagram.com/sfgz_onthemove/" class="icons-link">
-                                                                                               <img src="http://ci.sfgz.ch/newsletter/icons/instagram.png" class="icons-link">
+                                                                                               <img alt="instagram" src="http://ci.sfgz.ch/newsletter/icons/instagram.png" class="icons-link">
 
                                                                                              </a>
                                                                                              <a target="_blank" href="https://twitter.com/sfgzzh" class="icons-link">
-                                                                                               <img src="http://ci.sfgz.ch/newsletter/icons/twitter.png" class="icons-link">
+                                                                                               <img alt="twitter" src="http://ci.sfgz.ch/newsletter/icons/twitter.png" class="icons-link">
                                                                                              </a>
                                                                                            </div>
                                                                                          </td>
