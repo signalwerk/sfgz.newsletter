@@ -18,20 +18,42 @@
     <title>*|MC:SUBJECT|*</title>
 
 <style type="text/css">
+    @font-face {
+      font-family: "SFGZSansBlack";
+      font-weight: 800;
+      font-style: normal;
+      src: url("http://ci.sfgz.ch/newsletter/fonts/helvetica/2B6D49_0_0.eot");
+      src: url("http://ci.sfgz.ch/newsletter/fonts/helvetica/2B6D49_0_0.eot?#iefix") format("embedded-opentype"), url("http://ci.sfgz.ch/newsletter/fonts/helvetica/2B6D49_0_0.woff") format("woff"), url("http://ci.sfgz.ch/newsletter/fonts/helvetica/2B6D49_0_0.ttf") format("truetype");
+    }
+    .clearfix {
+      clear: both;
+    }
 		p{
-			margin:1em 0;
+			margin:0;
+      margin-bottom: 0.3em;
 			padding:0;
 		}
+    ul {
+      margin: 0;
+      padding: 0;
+      padding-left: 1em;
+
+    }
+    li {
+      margin-bottom: 0.3em;
+    }
 		table{
 			border-collapse:collapse;
 		}
+    h1,h2,h3,h4,h5,h6,b,strong{
+      font-family: "SFGZSansBlack", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Arial Black", sans-serif;
+      font-weight:800;
+    }
 		h1,h2,h3,h4,h5,h6{
 			display:block;
 			margin:0;
 			padding:0;
-			font-family: Helvetica;
 			font-style:normal;
-			font-weight:bold;
 		}
 		img,a img{
 			border:0;
@@ -85,11 +107,13 @@
 			line-height:inherit !important;
 		}
 		#bodyCell{
-			padding:9px;
+      padding-top:9px;
+      padding-left:9px;
+			padding-right:9px;
 		}
 		.templateImage{
 			height:auto;
-			max-width:564px;
+			max-width:600px;
 		}
 		.templateContainer{
 			max-width:600px !important;
@@ -105,17 +129,17 @@
 			padding-top:27px;
 			padding-bottom:18px;
 		}
-		#templateHeader,#templateBody,#templateFooter{
+		#templateFooter{
 			padding-right:18px;
 			padding-left:18px;
 		}
-	/*
-	@tab Page
-	@section Background Style
-	*/
-		body,#bodyTable{
-			/*@editable*/background-color:#FAFAFA;
-		}
+
+    body {
+      background-image: url("http://ci.sfgz.ch/newsletter/background01.svg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+
+    }
 	/*
 	@tab Page
 	@section Email Border
@@ -129,7 +153,7 @@
 	*/
 		h1{
 			/*@editable*/color:#000000;
-			/*@editable*/font-size:40px;
+			/*@editable*/font-size:42px;
 			/*@editable*/line-height:100%;
 			/*@editable*/letter-spacing:normal;
 			/*@editable*/text-align:left;
@@ -140,63 +164,43 @@
 	*/
 		h2{
 			/*@editable*/color:#000000;
-			/*@editable*/font-size:22px;
+			/*@editable*/font-size:24px;
 			/*@editable*/line-height:100%;
 			/*@editable*/letter-spacing:normal;
 			/*@editable*/text-align:left;
+      /*@editable*/padding-top:9px;
+      /*@editable*/padding-bottom:18px;
 		}
 	/*
 	@tab Page
 	@section Heading 3
 	*/
 		h3{
-      /*@editable*/color:#000000;
+			/*@editable*/color:#000000;
 			/*@editable*/font-size:20px;
 			/*@editable*/line-height:100%;
 			/*@editable*/letter-spacing:normal;
 			/*@editable*/text-align:left;
 		}
-	/*
-	@tab Preheader
-	@section Preheader Style
-	*/
-		#templatePreheader{
-			/*@editable*/background-color:#FAFAFA;
-			/*@editable*/background-image:none;
-			/*@editable*/background-repeat:no-repeat;
-			/*@editable*/background-position:center;
-			/*@editable*/background-size:cover;
-			/*@editable*/border-top:0;
-			/*@editable*/border-bottom:0;
-			/*@editable*/padding-top:9px;
-			/*@editable*/padding-bottom:9px;
-		}
-	/*
-	@tab Preheader
-	@section Preheader Text
-	*/
-		#templatePreheader,#templatePreheader p{
-			/*@editable*/color:#656565;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:12px;
-			/*@editable*/line-height:150%;
-			/*@editable*/text-align:left;
-		}
-	/*
-	@tab Preheader
-	@section Preheader Link
-	*/
-		#templatePreheader a,#templatePreheader p a{
-			/*@editable*/color:#cb2e26;
-			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
-		}
+
+  /*
+  @tab Page
+  @section Heading 4
+  */
+  h4{
+    /*@editable*/color:#000000;
+    /*@editable*/font-size:14px;
+    /*@editable*/line-height:125%;
+    /*@editable*/letter-spacing:normal;
+    /*@editable*/text-align:left;
+  }
+
 	/*
 	@tab Header
 	@section Header Style
 	*/
 		#templateHeader{
-			/*@editable*/background-color:#FFFFFF;
+			/*@editable*/background-color:transparent;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
 			/*@editable*/background-position:center;
@@ -204,52 +208,70 @@
 			/*@editable*/border-top:0;
 			/*@editable*/border-bottom:0;
 			/*@editable*/padding-top:18px;
-			/*@editable*/padding-bottom:0;
+			/*@editable*/padding-bottom:18px;
 		}
 	/*
 	@tab Header
 	@section Header Text
 	*/
 		#templateHeader,#templateHeader p{
-			/*@editable*/color:#606060;
+			/*@editable*/color:#000000;
 			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:16px;
-			/*@editable*/line-height:150%;
+			/*@editable*/font-size:20px;
+			/*@editable*/line-height:130%;
 			/*@editable*/text-align:left;
 		}
+    #templateHeader img{
+      display: block;
+    }
 	/*
 	@tab Header
 	@section Header Link
 	*/
 		#templateHeader a,#templateHeader p a{
-			/*@editable*/color:#cb2e26;
+			/*@editable*/color:#009EE0;
 			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
+			/*@editable*/text-decoration:none;
 		}
 	/*
 	@tab Body
 	@section Body Style
 	*/
 		#templateBody{
-			/*@editable*/background-color:#FFFFFF;
+			/*@editable*/background-color: transparent;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
 			/*@editable*/background-position:center;
 			/*@editable*/background-size:cover;
 			/*@editable*/border-top:0;
 			/*@editable*/border-bottom:2px solid #EAEAEA;
-			/*@editable*/padding-top:0;
+			/*@editable*/padding-top:0px;
 			/*@editable*/padding-bottom:9px;
 		}
+
+    #templateBody .module,
+    #templateBody .modulefullsize {
+      background-color: #FFFFFF;
+      margin-bottom: 18px;
+    }
+
+    #templateBody .module {
+      padding: 18px;
+    }
+
+    #templateBody .modulefullsize img {
+      display: block;
+    }
+
 	/*
 	@tab Body
 	@section Body Text
 	*/
-		#templateBody,#templateBody p{
-			/*@editable*/color:#606060;
+		#templateBody,#templateBody p,#templateBody ul{
+			/*@editable*/color:#000000;
 			font-family:Helvetica;
 			/*@editable*/font-size:20px;
-			/*@editable*/line-height:150%;
+			/*@editable*/line-height:130%;
 			/*@editable*/text-align:left;
 		}
 	/*
@@ -257,10 +279,50 @@
 	@section Body Link
 	*/
 		#templateBody a,#templateBody p a{
-			/*@editable*/color:#cb2e26;
+			/*@editable*/color:#009EE0;
 			font-weight:normal;
-			/*@editable*/text-decoration:underline;
+			/*@editable*/text-decoration:none;
 		}
+
+    #templateBody a:hover,#templateBody p a:hover{
+      color: #000000;
+    }
+
+	/*
+	@tab Columns
+	@section Column Style
+	@tip Set the background color and borders for your email's columns.
+	*/
+		#templateColumns{
+			/*@editable*/background-color:#FFFFFF;
+			/*@editable*/padding-top:0;
+			/*@editable*/padding-bottom:9px;
+      display: table-cell;
+		}
+	/*
+	@tab Columns
+	@section Column Text
+	@tip Set the styling for your email's column text. Choose a size and color that is easy to read.
+	*/
+		#templateColumns .columnContainer .mcnTextContent,#templateColumns .columnContainer .mcnTextContent p{
+			/*@editable*/color:#000000;
+			/*@editable*/font-family:Helvetica;
+			/*@editable*/font-size:20px;
+			/*@editable*/line-height:130%;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Columns
+	@section Column Link
+	@tip Set the styling for your email's column links. Choose a color that helps them stand out from your text.
+	*/
+		#templateColumns .columnContainer .mcnTextContent a, #templateColumns .columnContainer .mcnTextContent p a{
+			/*@editable*/color:#009EE0;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:none;
+		}
+
+
 	/*
 	@tab Footer
 	@section Footer Style
@@ -273,37 +335,8 @@
 			/*@editable*/background-size:cover;
 			/*@editable*/border-top:0;
 			/*@editable*/border-bottom:0;
-			/*@editable*/padding-top:36px;
+			/*@editable*/padding-top:18px;
 			/*@editable*/padding-bottom:9px;
-		}
-	/*
-	@tab Footer
-	@section Social Bar Style
-	*/
-		#socialBar{
-			/*@editable*/background-color:#333333;
-			/*@editable*/border:0;
-			/*@editable*/padding:18px;
-		}
-	/*
-	@tab Footer
-	@section Social Bar Text
-	*/
-		#socialBar,#socialBar p{
-			/*@editable*/color:#FFFFFF;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:12px;
-			/*@editable*/line-height:150%;
-			/*@editable*/text-align:center;
-		}
-	/*
-	@tab Footer
-	@section Social Bar Link
-	*/
-		#socialBar a,#socialBar p a{
-			/*@editable*/color:#FFFFFF;
-			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
 		}
 	/*
 	@tab Footer
@@ -313,7 +346,7 @@
 			/*@editable*/color:#656565;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:12px;
-			/*@editable*/line-height:150%;
+			/*@editable*/line-height:130%;
 			/*@editable*/text-align:center;
 		}
 	/*
@@ -323,7 +356,7 @@
 		#footerContent a,#footerContent p a{
 			/*@editable*/color:#656565;
 			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
+			/*@editable*/text-decoration:none;
 		}
 	/*
 	@tab Footer
@@ -343,7 +376,7 @@
 			/*@editable*/color:#656565;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:12px;
-			/*@editable*/line-height:150%;
+			/*@editable*/line-height:130%;
 			/*@editable*/text-align:center;
 		}
 	/*
@@ -353,7 +386,7 @@
 		#utilityBar a,#utilityBar p a{
 			/*@editable*/color:#656565;
 			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
+			/*@editable*/text-decoration:none;
 		}
 	@media only screen and (max-width: 480px){
 		body,table,td,p,a,li,blockquote{
@@ -395,7 +428,7 @@
 	*/
 		h1{
 			/*@editable*/font-size:22px !important;
-			/*@editable*/line-height:175% !important;
+			/*@editable*/line-height:100% !important;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -405,7 +438,7 @@
 	*/
 		h2{
 			/*@editable*/font-size:20px !important;
-			/*@editable*/line-height:175% !important;
+			/*@editable*/line-height:100% !important;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -415,26 +448,17 @@
 	*/
 		h3{
 			/*@editable*/font-size:18px !important;
-			/*@editable*/line-height:175% !important;
+			/*@editable*/line-height:100% !important;
 		}
 
 }	@media only screen and (max-width: 480px){
 	/*
 	@tab Mobile Styles
-	@section Preheader Visibility
+	@section Heading 3
 	*/
-		#templatePreheader{
-			/*@editable*/display:block !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Preheader Text
-	*/
-		#templatePreheader,#templatePreheader p{
-			/*@editable*/font-size:14px !important;
-			/*@editable*/line-height:150% !important;
+		h4{
+			/*@editable*/font-size:13px !important;
+			/*@editable*/line-height:125% !important;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -444,7 +468,7 @@
 	*/
 		#templateHeader,#templateHeader p{
 			/*@editable*/font-size:16px !important;
-			/*@editable*/line-height:150% !important;
+			/*@editable*/line-height:130% !important;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -452,9 +476,9 @@
 	@tab Mobile Styles
 	@section Body Text
 	*/
-		#templateBody,#templateBody p{
+		#templateBody,#templateBody p,#templateBody ul{
 			/*@editable*/font-size:16px !important;
-			/*@editable*/line-height:150% !important;
+			/*@editable*/line-height:130% !important;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -464,17 +488,7 @@
 	*/
 		#templateFooter,#templateFooter p{
 			/*@editable*/font-size:14px !important;
-			/*@editable*/line-height:150% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Social Bar Text
-	*/
-		#socialBar,#socialBar p{
-			/*@editable*/font-size:14px !important;
-			/*@editable*/line-height:150% !important;
+			/*@editable*/line-height:130% !important;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -484,7 +498,7 @@
 	*/
 		#utilityBar,#utilityBar p{
 			/*@editable*/font-size:14px !important;
-			/*@editable*/line-height:150% !important;
+			/*@editable*/line-height:130% !important;
 		}
 
 }</style></head>
@@ -501,60 +515,22 @@
                     <td align="center" valign="top" width="600" style="width:600px;">
                     <![endif]-->
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
-                        <!-- BEGIN PREHEADER // -->
+                        <!-- BEGIN LOGO // -->
                         <tr>
-                            <td valign="top" id="templatePreheader">
-
-                                <!-- BEGIN MODULE: STANDARD PREHEADER // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td valign="top">
-                                            <!--[if mso]>
-                                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-                                            <tr>
-                                            <td valign="top" width="384" style="width:384px;">
-                                            <![endif]-->
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:384px;" width="100%" class="columnContainer">
-                                                <tr>
-                                                    <td valign="top">
-                                                        <div mc:edit="preheader_leftcol_content">
-                                                            <p>Use this area to offer a short preview of your email's content.</p>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]>
-                                            </td>
-                                            <td valign="top" width="180" style="width:180px;">
-                                            <![endif]-->
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:180px;" width="100%" class="columnContainer">
-                                                <tr>
-                                                    <td valign="top">
-                                                        <div mc:edit="preheader_rightcol_content">
-                                                            <p><a href="*|ARCHIVE|*" target="_blank">View email in your browser</a></p>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]>
-                                            </td>
-                                            </tr>
-                                            </table>
-                                            <![endif]-->
-                                        </td>
-                                    </tr>
-                                </table>
-                                <!-- // END MODULE: STANDARD PREHEADER -->
-
+                            <td valign="top" id="templateLogo">
+                                <!-- BEGIN MODULE: LOGO IMAGE // -->
+                                <img src="http://ci.sfgz.ch/newsletter/header.png" style="max-width:600px;" class="templateImage">
+                                <!-- // END MODULE: LOGO IMAGE -->
                             </td>
                         </tr>
-                        <!-- // END PREHEADER -->
+                        <!-- // END LOGO -->
+
                         <!-- BEGIN HEADER // -->
                         <tr>
                             <td valign="top" id="templateHeader">
 
                                 <!-- BEGIN MODULE: HEADER IMAGE // -->
-                                <img src="https://gallery.mailchimp.com/87ce8f25ff95a7f203c76c0ab/images/5ab9a40f-549b-4619-92c2-d7fd6e34e6b4.png" style="max-width:564px;" class="templateImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
+                                <img src="http://ci.sfgz.ch/newsletter/600x360.png" style="max-width:600px;" class="templateImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
                                 <!-- // END MODULE: HEADER IMAGE -->
 
                             </td>
@@ -565,15 +541,319 @@
                             <td valign="top" id="templateBody">
 
                                 <!-- BEGIN MODULE: BODY CONTENT // -->
-                                <div mc:edit="body_content">
-                                    <h1>Heading 1</h1>
-                                    <h2>Heading 2</h2>
-                                    <h3>Heading 3</h3>
-                                    <p><strong>Getting started!</strong><br>To choose your fonts, colors, and styles, click <strong>Edit Design</strong> at the bottom of this screen. After you create a look and feel you love, click inside this box to start adding your own content.</p>
-                                    <p>Any time you create a layout here, you'll be able to find it in the <strong>Saved Templates</strong> tab on the <strong>Templates</strong> step. Then, you can reuse it as-is or quickly create new, similar versions for different types of messages.</p>
-                                    <p>Our <a href="https://templates.mailchimp.com/">Email Design Reference</a> can help you add content blocks to this template or show you how to design and code your own from scratch.</p>
+                                <div class="module" mc:repeatable="mainContent" mc:variant="1 Spalte – Text">
+                                  <div mc:edit="body_content_00">
+                                      <h2>Heading 2</h2>
+                                      <p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                                      </p>
+
+                                      <p>
+Lorem ipsum dolor <a href="http://sfgz.ch/">Link</a> sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                                      </p>
+                                  </div>
                                 </div>
                                 <!-- // END MODULE: BODY CONTENT -->
+
+
+                                <!-- BEGIN MODULE: BODY CONTENT // -->
+                                <div class="modulefullsize" mc:repeatable="mainContent" mc:variant="1 Spalte – Bild">
+                                  <img src="http://ci.sfgz.ch/newsletter/600x360.png" style="max-width:600px;" class="templateImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
+                                </div>
+                                <!-- // END MODULE: BODY CONTENT -->
+
+
+
+                                <!-- BEGIN MODULE: BODY CONTENT // -->
+                                <div class="module" mc:repeatable="mainContent" mc:variant="2 Spalten – Text">
+                                  <div id="templateColumns">
+                                     <!--[if (gte mso 9)|(IE)]>
+                                     <table align="center" border="0" cellspacing="0" cellpadding="0" width="564" style="width:564px;">
+                                        <tr>
+                                           <td align="center" valign="top" width="282" style="width:282px;">
+                                              <![endif]-->
+                                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="282" class="columnWrapper">
+                                                 <tbody>
+                                                    <tr>
+                                                       <td valign="top" class="columnContainer">
+                                                          <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+                                                             <tbody class="mcnTextBlockOuter">
+                                                                <tr>
+                                                                   <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                                                                      <!--[if mso]>
+                                                                      <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                                                                         <tr>
+                                                                            <![endif]-->
+                                                                            <!--[if mso]>
+                                                                            <td valign="top" width="282" style="width:282px;">
+                                                                               <![endif]-->
+                                                                               <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                                                                                  <tbody>
+                                                                                     <tr>
+                                                                                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:9px; padding-bottom:9px; padding-left:0px;">
+
+                                                                                          <div mc:edit="body_content_00">
+                                                                                              <h2>Heading 2</h2>
+                                                                                              <ul>
+                                                                                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
+                                                                                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
+                                                                                              </ul>
+                                                                                              <p>
+                                                                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+                                                                                              </p>
+                                                                                          </div>
+                                                                                        </td>
+                                                                                     </tr>
+                                                                                  </tbody>
+                                                                               </table>
+                                                                               <!--[if mso]>
+                                                                            </td>
+                                                                            <![endif]-->
+                                                                            <!--[if mso]>
+                                                                         </tr>
+                                                                      </table>
+                                                                      <![endif]-->
+                                                                   </td>
+                                                                </tr>
+                                                             </tbody>
+                                                          </table>
+                                                       </td>
+                                                    </tr>
+                                                 </tbody>
+                                              </table>
+                                              <!--[if (gte mso 9)|(IE)]>
+                                           </td>
+                                           <td align="center" valign="top" width="282" style="width:282px;">
+                                              <![endif]-->
+                                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="282" class="columnWrapper">
+                                                 <tbody>
+                                                    <tr>
+                                                       <td valign="top" class="columnContainer">
+                                                          <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageCardBlock">
+                                                            <tbody class="mcnTextBlockOuter">
+                                                               <tr>
+                                                                  <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                                                                     <!--[if mso]>
+                                                                     <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                                                                        <tr>
+                                                                           <![endif]-->
+                                                                           <!--[if mso]>
+                                                                           <td valign="top" width="282" style="width:282px;">
+                                                                              <![endif]-->
+                                                                              <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:0px; padding-bottom:9px; padding-left:9px;">
+
+                                                                                         <div mc:edit="body_content_01">
+                                                                                             <h2>Heading 2</h2>
+                                                                                             <ul>
+                                                                                               <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
+                                                                                               <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
+                                                                                             </ul>
+                                                                                             <p>
+                                                                                               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+                                                                                             </p>
+                                                                                         </div>
+                                                                                       </td>
+                                                                                    </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                              <!--[if mso]>
+                                                                           </td>
+                                                                           <![endif]-->
+                                                                           <!--[if mso]>
+                                                                        </tr>
+                                                                     </table>
+                                                                     <![endif]-->
+                                                                  </td>
+                                                               </tr>
+                                                            </tbody>
+                                                          </table>
+                                                       </td>
+                                                    </tr>
+                                                 </tbody>
+                                              </table>
+                                              <!--[if (gte mso 9)|(IE)]>
+                                           </td>
+                                        </tr>
+                                     </table>
+                                     <![endif]-->
+
+                                     <div class="clearfix"></div>
+                                  </div>
+                                </div>
+                                <!-- // END MODULE: BODY CONTENT -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  <!-- BEGIN MODULE: BODY CONTENT // -->
+                                  <div class="module" mc:repeatable="mainContent" mc:variant="2 Spalten – Footer">
+                                    <div id="templateColumns">
+                                       <!--[if (gte mso 9)|(IE)]>
+                                       <table align="center" border="0" cellspacing="0" cellpadding="0" width="564" style="width:564px;">
+                                          <tr>
+                                             <td align="center" valign="top" width="282" style="width:282px;">
+                                                <![endif]-->
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="282" class="columnWrapper">
+                                                   <tbody>
+                                                      <tr>
+                                                         <td valign="top" class="columnContainer">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+                                                               <tbody class="mcnTextBlockOuter">
+                                                                  <tr>
+                                                                     <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                                                                        <!--[if mso]>
+                                                                        <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                                                                           <tr>
+                                                                              <![endif]-->
+                                                                              <!--[if mso]>
+                                                                              <td valign="top" width="282" style="width:282px;">
+                                                                                 <![endif]-->
+                                                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                                                                                    <tbody>
+                                                                                       <tr>
+                                                                                          <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:9px; padding-bottom:9px; padding-left:0px;">
+
+                                                                                            <div mc:edit="body_content_00">
+                                                                                                <h4>
+                                                                                                  Wir beraten Sie gerne!</br>
+                                                                                                  Weiterbildungssekaretariat</br>
+                                                                                                  E-Mail: <a href="mailto:weiterbildung@sfgz.ch">weiterbildung@sfgz.ch</a></br>
+                                                                                                  Telefon: 044 446 97 77
+                                                                                                </h4>
+                                                                                            </div>
+                                                                                          </td>
+                                                                                       </tr>
+                                                                                    </tbody>
+                                                                                 </table>
+                                                                                 <!--[if mso]>
+                                                                              </td>
+                                                                              <![endif]-->
+                                                                              <!--[if mso]>
+                                                                           </tr>
+                                                                        </table>
+                                                                        <![endif]-->
+                                                                     </td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                                <!--[if (gte mso 9)|(IE)]>
+                                             </td>
+                                             <td align="center" valign="top" width="282" style="width:282px;">
+                                                <![endif]-->
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="282" class="columnWrapper">
+                                                   <tbody>
+                                                      <tr>
+                                                         <td valign="top" class="columnContainer">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageCardBlock">
+                                                              <tbody class="mcnTextBlockOuter">
+                                                                 <tr>
+                                                                    <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                                                                       <!--[if mso]>
+                                                                       <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                                                                          <tr>
+                                                                             <![endif]-->
+                                                                             <!--[if mso]>
+                                                                             <td valign="top" width="282" style="width:282px;">
+                                                                                <![endif]-->
+                                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                                                                                   <tbody>
+                                                                                      <tr>
+                                                                                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:0px; padding-bottom:9px; padding-left:9px;">
+
+                                                                                           <div>
+                                                                                             <a target="_blank" href="https://www.facebook.com/sfgzzh/" class="">
+                                                                                               <img src="http://ci.sfgz.ch/newsletter/icons/facebook.png" class="icons-link">
+
+                                                                                             </a>
+                                                                                             <a target="_blank" href="https://www.instagram.com/sfgz_onthemove/" class="icons-link">
+                                                                                               <img src="http://ci.sfgz.ch/newsletter/icons/instagram.png" class="icons-link">
+
+                                                                                             </a>
+                                                                                             <a target="_blank" href="https://twitter.com/sfgzzh" class="icons-link">
+                                                                                               <img src="http://ci.sfgz.ch/newsletter/icons/twitter.png" class="icons-link">
+                                                                                             </a>
+                                                                                           </div>
+                                                                                         </td>
+                                                                                      </tr>
+                                                                                   </tbody>
+                                                                                </table>
+                                                                                <!--[if mso]>
+                                                                             </td>
+                                                                             <![endif]-->
+                                                                             <!--[if mso]>
+                                                                          </tr>
+                                                                       </table>
+                                                                       <![endif]-->
+                                                                    </td>
+                                                                 </tr>
+                                                              </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                                <!--[if (gte mso 9)|(IE)]>
+                                             </td>
+                                          </tr>
+                                       </table>
+                                       <![endif]-->
+
+                                       <div class="clearfix"></div>
+                                    </div>
+                                  </div>
+                                  <!-- // END MODULE: BODY CONTENT -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                             </td>
                         </tr>
@@ -585,34 +865,10 @@
                                 <!-- BEGIN MODULE: STANDARD FOOTER // -->
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                        <td valign="top" id="socialBar">
-                                            <div mc:edit="social_bar">
-                                                <a href="*|TWITTER:PROFILEURL|*" class="utilityLink">Follow on Twitter</a><span class="mobileHide"> &nbsp; | &nbsp; </span><a href="*|FACEBOOK:PROFILEURL|*" class="utilityLink">Friend on Facebook</a>
-                                                <span class="mobileHide"> &nbsp; | &nbsp; </span><a href="*|FORWARD|*" class="utilityLink">Forward to a Friend</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
                                         <td valign="top" id="footerContent">
                                             <div mc:edit="footer_content">
-                                                *|IF:LIST|*
-                                                <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
+                                                <em>*|CURRENT_YEAR|* *|LIST:COMPANY|*</em>
                                                 <br>
-                                                <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                                *|LIST:DESCRIPTION|*
-                                                <br>
-                                                <strong>Our mailing address is:</strong>
-                                                <br> *|HTML:LIST_ADDRESS_HTML|*
-                                                <br>
-                                                <!-- *|END:IF|* -->
-                                                *|ELSE:|*
-                                                <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                                <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, All rights reserved.</em>
-                                                <br>
-                                                <strong>Our mailing address is:</strong>
-                                                <br> *|USER:ADDRESS_HTML|*
-                                                <!-- *|END:IF|* -->
-                                                *|END:IF|*
                                             </div>
                                             <div mc:edit="monkeyrewards">
                                                 *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
@@ -622,8 +878,8 @@
                                     <tr>
                                         <td valign="top" id="utilityBar">
                                             <div mc:edit="utility_bar">
-                                                <a href="*|UNSUB|*" class="utilityLink">unsubscribe from this list</a><span class="mobileHide"> | </span><a href="*|UPDATE_PROFILE|*" class="utilityLink">update subscription preferences</a>
-                                                <!-- *|IFNOT:ARCHIVE_PAGE|* --><span class="mobileHide"> | </span><a href="*|ARCHIVE|*" class="utilityLink">view email in browser</a>
+                                                <a href="*|UNSUB|*" class="utilityLink">Newsletter abmelden</a>
+                                                <!-- *|IFNOT:ARCHIVE_PAGE|* --><span class="mobileHide"> | </span><a href="*|ARCHIVE|*" class="utilityLink">E-Mail im Browser öffnen</a>
                                                 <!-- *|END:IF|* -->
                                             </div>
                                         </td>
