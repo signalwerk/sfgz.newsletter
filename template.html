@@ -138,7 +138,7 @@
       background-image: url("http://ci.sfgz.ch/newsletter/background01.svg");
       background-repeat: no-repeat;
       background-size: 100% auto;
-
+      background-position: left top;
     }
 	/*
 	@tab Page
@@ -482,6 +482,30 @@
 		#templateBody,#templateBody p,#templateBody ul{
 			/*@editable*/font-size:16px !important;
 			/*@editable*/line-height:130% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+	/*
+	@tab Mobile Styles
+	@section Column Text
+	@tip Make the column text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+	*/
+		.templateColumns .columnContainer .mcnTextContent,.templateColumns .columnContainer .mcnTextContent p{
+			/*@editable*/font-size:16px !important;
+			/*@editable*/line-height:130% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+
+		.templateColumns .columnWrapper{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+
+		.templateColumns .columnWrapper .mcnTextContent{
+      padding-left:0 !important;
+			padding-right:0 !important;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -870,7 +894,7 @@ Lorem ipsum dolor <a href="http://sfgz.ch/">Link</a> sit amet, consectetuer adip
                                     <tr>
                                         <td valign="top" id="footerContent">
                                             <div mc:edit="footer_content">
-                                                <em>*|CURRENT_YEAR|* *|LIST:COMPANY|*</em>
+                                                <em>*|CURRENT_YEAR|* – *|LIST:COMPANY|*</em>
                                                 <br>
                                             </div>
                                             <div mc:edit="monkeyrewards">
